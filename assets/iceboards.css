@@ -1,6 +1,5 @@
-xul#links { overflow: auto; }
-ul#links li ul { margin: 46px 0 0; background-color: #fff; padding: 2px; position: fixed; display:none}
-ul#links li:hover ul { display: block }
-ul#links li ul:hover { display: block }
-ul#links li ul li { height: 20px; float: none; }
-ul#links li ul li a { xheight: 20px; font-weight: normal; padding: 0;}
+ul#links { float: left; position: relative; }
+ul#links ul { margin: 46px 0 0; background-color: #fff; padding: 2px; position: fixed; visibility:hidden; position: absolute; }
+ul#links li:hover ul, ul#links a:hover ul { visibility: visible; }
+ul#links ul li { height: 20px; float: none; }
+ul#links ul li a { xheight: 20px; font-weight: normal; padding: 0;}
