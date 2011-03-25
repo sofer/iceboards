@@ -45,11 +45,19 @@
 			<ul id="links">
 			{% for link in linklists.main-menu.links limit: 6 %}
 				<li class="link-{{ forloop.index }}"><a href="{{ link.url }}"{% if link.url == active_url %} class="active"{% endif %}>{{ link.title | escape }}</a>
-					<ul>
-						<li><a href="#">some stuff ({{ forloop.index }})</a></li>
-						<li><a href="#">some more stuff ({{ forloop.index }})</a></li>
-						<li><a href="#">yet more stuff ({{ forloop.index }})</a></li>
-					</ul>					
+					<div id="subnav">
+						<ul>
+							<li><a href="#">SUBMENU No.{{ forloop.index }}</a></li>
+							<li><a href="#">Just styled for now </a></li>
+							<li><a href="#">Can add content</a></li>
+							<li><a href="#">when we have </a></li>
+							<li><a href="#">categories set up</a></li>
+						</ul>					
+						<ul>
+							<li><a href="#">SUBMENU No.{{ forloop.index }} Column 2</a></li>
+							<li><a href="#">And more stuff here...</a></li>
+						</ul>					
+					</div>
 				</li>
 				{% endfor %}
 			</ul>

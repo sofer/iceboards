@@ -1,5 +1,14 @@
+/*
 ul#links { float: left; position: relative; }
 ul#links ul { margin: 46px 0 0; background-color: #fff; padding: 2px; position: fixed; visibility:hidden; position: absolute; }
 ul#links li:hover ul, ul#links a:hover ul { visibility: visible; }
-ul#links ul li { height: 20px; float: none; }
 ul#links ul li a { xheight: 20px; font-weight: normal; padding: 0;}
+*/
+
+ul#links { overflow: visible; }
+#subnav { padding: 0; margin: 44px 0 0; position: absolute; visibility: hidden; background: #fff; width:880px; left: 0; }
+ul#links li:hover #subnav { visibility: visible; }
+#subnav ul { border-right: 1px solid #999; width: 12em; background: none; float: left; height: 200px; margin: 4px; }
+#subnav ul li { height: 20px; float: none; }
+#subnav ul li a { padding: 0 4px; background: #fff; font-weight: normal; text-align: left; width: 100%; }
+
