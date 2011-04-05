@@ -31,7 +31,9 @@
 			<div id="hello">
 				<div>{% if settings.phone.size > 0 %}
 					<p><strong>t:</strong> {{ settings.phone | escape }}</p>{% endif %}{% if settings.email.size > 0 %}
-					<p><strong>e:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email | escape }}</a></p>{% endif %}
+					<p><strong>e:</strong> <a href="mailto:{{ settings.email }}">{{ settings.email | escape }}</a></p>
+					{% include 'skype' %}
+					{% endif %}
 				</div>
 			</div>
 			<!-- END HELLO -->{% endif %}
