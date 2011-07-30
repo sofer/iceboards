@@ -11,4 +11,5 @@ ul#links li:hover #subnav { visibility: visible; }
 #subnav ul { border-right: 1px solid #999; width: 12em; background: none; float: left; height: 200px; margin: 4px; }
 #subnav ul li { height: 20px; float: none; }
 #subnav ul li a { padding: 0 4px; background: #fff; font-weight: normal; text-align: left; width: 100%; }
+#subnav ul li a:hover { text-decoration: underline; color: #2200c1; }
 
