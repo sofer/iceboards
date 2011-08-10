@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<!-- END IMAGE -->
-		<h3><a href="{{ product.url | within: collection }}">{{ product.title | escape | truncate: 25 }}</a></h3>
+		<h3><a href="{{ product.url | within: collection }}">{{ product.title | escape | truncate: 40 }}</a></h3>
 		<p>{{ product.price | money }}{% if product.compare_at_price_max > product.price %} <del>{{ product.compare_at_price_max | money }}</del>{% endif %}</p>
 	</li>
 	<!-- END PRODUCT {{ forloop.index }} -->{% endfor %}
