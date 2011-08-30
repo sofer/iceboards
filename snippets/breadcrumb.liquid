@@ -1,7 +1,9 @@
 <div id="breadcrumb">
-  {% if template == 'collection' %}
+	{% if template == "product" %}
+	  {% if collection %}
+	    <a href="/collections/{{ collection.handle }}">{{ collection.title }}</a> &raquo;
+	  {% endif %}
+	    {{ product.title }}
+	{% endif %}
 
-  {% elsif template == 'product' %}
-
-  {% endif %}
 </div>

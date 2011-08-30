@@ -1,0 +1,11 @@
+TAGS: 
+{% for tag in product.tags %}
+	<a href="{{collection.url}}/{{tag.handle}}">{{tag}}</a> |
+	{{ tag | link_to: collection.url/tag }}
+	
+{% endfor %}
+
+
+{% for tag in tags %}  
+  {{ '+' | link_to_add_tag: tag }} {{ tag | link_to_tag: tag }} |
+{% endfor %}

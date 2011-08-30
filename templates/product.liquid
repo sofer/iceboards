@@ -29,8 +29,8 @@
 				<div id="variants">
 					<div class="border">
 						<select name="id" id="id">{% for variant in product.variants %}{% if variant.available %}
-							<option value="{{ variant.id }}">{{ variant.title | escape }} ({{ variant.price | money }})</option>{% else %}
-							<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} ({{ variant.price | money }}) - SOLD OUT</option>{% endif %}{% endfor %}
+							<option value="{{ variant.id }}">{{ variant.title | escape }}</option>{% else %}
+							<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} - SOLD OUT</option>{% endif %}{% endfor %}
 						</select>
 					</div>
 				</div>
@@ -49,4 +49,6 @@
 	</div>
 	<!-- END DETAILS -->
 </div>
-<!-- END SUMMARY -->{% include "related" %}
+<!-- END SUMMARY -->
+{% include "tags" %}
+{% include "related" %}
