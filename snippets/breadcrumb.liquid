@@ -4,6 +4,11 @@
 	    <a href="/collections/{{ collection.handle }}">{{ collection.title }}</a> &raquo;
 	  {% endif %}
 	    {{ product.title }}
+	{% elsif template == "collection" %}
+	
+		{% for tag in collection.tags %}
+			{{ tag | highlight_active_tag | link_to_add_tag: tag }}
+		{% endfor %}		
 	{% endif %}
 
 </div>

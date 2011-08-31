@@ -16,3 +16,4 @@ ul#links li:hover #subnav { visibility: visible; }
 #image { text-align: center; }
 #image img { float: none !important; }
 #breadcrumb { margin: 0 8px; }
+.active { font-weight: bold ;}
