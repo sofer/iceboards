@@ -5,10 +5,22 @@
 	  {% endif %}
 	    {{ product.title }}
 	{% elsif template == "collection" %}
-	
+		<div id="current_tags">
+			{% if current_tags.size > 0 %}
+				Filtering on: 
+			{% endif %}
+		{% for tag in current_tags %}
+			{{ tag | link_to_remove_tag: tag }}
+		{% endfor %}
+		</div>
+		<div id="tags">
+			{% if collection.tags.size > 0 %}
+				Narrow selection: 
+			{% endif %}
 		{% for tag in collection.tags %}
 			{{ tag | highlight_active_tag | link_to_add_tag: tag }}
-		{% endfor %}		
+		{% endfor %}
+		</div>	
 	{% endif %}
-
+	<br>
 </div>
