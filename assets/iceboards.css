@@ -6,12 +6,12 @@ ul#links ul li a { xheight: 20px; font-weight: normal; padding: 0;}
 */
 
 ul#links { overflow: visible; }
-#subnav { padding: 0; margin: 44px 0 0; position: absolute; visibility: hidden; background: #fff; width:880px; left: 0; }
+#subnav { padding: 0; margin: 44px 0 0; position: absolute; visibility: hidden; background: #eee; width:880px; left: 0; }
 ul#links li:hover #subnav { visibility: visible; }
-#subnav ul { border-right: 1px solid #999; width: 15em; background: none; float: left; height: 200px; margin: 4px; }
-#subnav ul li { height: 20px; width: 100%; float: none; }
-#subnav ul li a { padding: 0 4px; background: #fff; font-weight: normal; text-align: left; width: 100%; }
-#subnav ul li a:hover { text-decoration: underline; color: #2200c1; }
+#subnav ul { border-right: 1px solid #999; width: 15em; background: #eee; float: left; height: 200px; margin: 4px; }
+#subnav ul li { height: 22px; width: 100%; float: none; }
+#subnav ul li a { padding: 0 4px; background: #eee; font-weight: normal; text-align: left; width: 100%; line-height: 1.2;}
+#subnav ul li a:hover { font-weight: bold; text-decoration: none; xcolor: #2200c1; }
 .image { text-align: center; }
 #image { text-align: center; }
 #image img { float: none !important; }
@@ -19,3 +19,4 @@ ul#links li:hover #subnav { visibility: visible; }
 #current_tags, #tags { float: left; }
 #tags { float: right; }
 #tags .active { display: none;}
+.strapline { font-size: 13px; margin: 10px; }
