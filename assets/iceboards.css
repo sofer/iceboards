@@ -20,3 +20,9 @@ ul#links li:hover #subnav { visibility: visible; }
 #tags { float: right; }
 #tags .active { display: none;}
 .strapline { font-size: 13px; margin: 10px; }
+#searchbox { float: right; margin: 20px 200px; }
+#searchbox input[type=text] { height: 14px; width: 120px; }
+#finder { float: right; padding: 12px 150px !important;}
+#finder input.field { height: 14px !important; width: 120px !important; padding: 3px !important;}
+#finder input.submit { padding: 4px !important;}
+#search h1 { font-size: 22px !important; text-align: left !important; }

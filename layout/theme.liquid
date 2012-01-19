@@ -29,7 +29,8 @@
 				<a href="/"><img src="{{ "logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
 			</div>{% else %}
 			<h2><a href="/">{{ shop.name | escape }}</a></h2>{% endif %}
-			<!-- END LOGO -->{% if settings.phone.size > 0 or settings.email.size > 0 %}
+			<!-- END LOGO -->			
+			{% if settings.phone.size > 0 or settings.email.size > 0 %}
 			<!-- START HELLO -->
 			<div id="hello">
 				<div>{% if settings.phone.size > 0 %}
@@ -40,6 +41,7 @@
 				</div>
 			</div>
 			<!-- END HELLO -->{% endif %}
+			{% include 'search' %}
 		</div>
 		<!-- END HEADER -->
 		<!-- START NAVIGATE -->
@@ -101,7 +103,7 @@
 		<!-- END OVERVIEW -->
 		<!-- START FOOTER -->
 		<div id="footer" class="clear">
-			<p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | escape }}. Powered by <a href="http://www.shopify.com">Shopify</a>.</p>{% if linklists.footer.links.size > 0 %}
+			<p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | escape }}.</p>{% if linklists.footer.links.size > 0 %}
 			<p class="links">{% for link in linklists.footer.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% unless forloop.last %} <span>&#124;</span> {% endunless %}{% endfor %}</p>{% endif %}
 		</div>
 		<!-- END FOOTER -->

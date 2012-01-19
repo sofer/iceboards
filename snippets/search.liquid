@@ -1,0 +1,8 @@
+<!-- START FINDER -->
+<div id="finder" class="clear">
+	<form method="get" action="/search">
+		<input type="text" name="q"{% if search.performed %} value="{{ search.terms | escape | downcase }}"{% endif %} class="field" /> 
+		<input type="submit" value="Search" class="submit" />
+	</form>
+</div>
+<!-- END FINDER -->

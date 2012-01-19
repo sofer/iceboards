@@ -1,12 +1,5 @@
-{% paginate search.results by 12 %}<h1>Search</h1>
-<!-- START FINDER -->
-<div id="finder" class="clear">
-	<form method="get" action="/search">
-		<input type="text" name="q"{% if search.performed %} value="{{ search.terms | escape | downcase }}"{% endif %} class="field" /> 
-		<input type="submit" value="Search" class="submit" />
-	</form>
-</div>
-<!-- END FINDER -->{% if search.results == empty %}
+{% paginate search.results by 12 %}<h1>showing results for <em>{{ search.terms | escape | downcase }}</em></h1>
+{% if search.results == empty %}
 <p id="empty">Your search for "{{ search.terms | escape | downcase }}" did not yield any results.</p>{% else %}
 <!-- START RESULTS -->
 <ul id="results" class="clear">{% for item in search.results %}
