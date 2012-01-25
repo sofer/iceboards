@@ -2,10 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
-	<!-- <title>{{ shop.name | escape }} &mdash; {% if template == "404" %}Page Not Found{% else %}{{ page_title | escape }}{% endif %}</title> -->
-	<title>iceboards.co.uk | Ski and Snowboard Shop | Free Delivery</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="copyright" content="{{ shop.name | escape }}" />
+	<title>
+	  {{ shop.name | escape }} | 
+	  {% if template == "404" %}Page Not Found
+	  {% elsif template == "index" %}
+	    Ski and Snowboard Shop | Free Delivery
+	  {% else %}
+	    {{ page_title | escape }}
+	  {% endif %}
+	</title>
+	{% include 'meta' %}
 	{{ content_for_header }}
 	{{ "theme.css" | asset_url | stylesheet_tag }}
 	<!--[if lte IE 6]>{{ "ie6.css" | asset_url | stylesheet_tag }}<![endif]-->{% if template == "product" %}{% if product.available %}{% if product.variants.size > 1 %}
@@ -20,7 +27,6 @@
 
 <body>
 	<!-- START CONTAINER -->
-  <div class="strapline">Iceboards is one of the UK's best value Snowsport retailers. We offer free shipping on a wide range and guarantee to price match on all our products.</div>
 	<div id="container">
 		<!-- START HEADER -->
 		<div id="header" class="clear">
